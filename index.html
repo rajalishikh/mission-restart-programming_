@@ -14,10 +14,26 @@
   </head>
   <body>
     <!-- Navbar Section  start -->
-    <section>
-      <div class="navbar bg-base-100 shadow-sm">
+    <section >
+      
+        <div class="navbar bg-base-100 shadow-sm lg:pl-32 lg:pr-32">
         <div class="navbar-start">
-          <div class="dropdown">
+          
+          <a class="text-xl">SwiftCart</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li>
+              <a>Products</a>
+            </li>
+            <li><a>About</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <img class="w-9" src="image/shopping-cart.png" alt="" srcset="" />
+          <div class="dropdown dropdown-end">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +52,7 @@
             </div>
             <ul
               tabindex="-1"
-              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1  shadow"
             >
               <li><a>Home</a></li>
               <li>
@@ -46,23 +62,9 @@
               <li><a>Contact</a></li>
             </ul>
           </div>
-          <a class="btn btn-ghost text-xl">SwiftCart</a>
         </div>
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
-            <li>
-              <a>Products</a>
-            </li>
-            <li><a>About</a></li>
-            <li><a>Contact</a></li>
-          </ul>
-        </div>
-        <div class="navbar-end">
-          <img class="w-9" src="image/shopping-cart.png" alt="" srcset="" />
-        </div>
-      </div>
-    </section>
+       </div>
+</section>
     <!-- Navbar Section  End -->
   </body>
 </html>
