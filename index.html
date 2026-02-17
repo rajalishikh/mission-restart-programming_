@@ -13,6 +13,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
+    
+
+
     <!-- Navbar Section  start -->
     <section>
       <div class="navbar bg-base-100 shadow-sm lg:pl-32 lg:pr-32">
@@ -22,13 +25,13 @@
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1 bg-transparent">
             <li>
-              <a
+              <a onclick="change_the_Product_Page()"
                 class="bg-transparent hover:bg-transparent hover:text-[#4b3deb]"
                 >Home</a
               >
             </li>
             <li>
-              <a
+              <a onclick="change_the_home_Page()"
                 class="bg-transparent hover:bg-transparent hover:text-[#4b3deb]"
                 >Products</a
               >
@@ -71,13 +74,13 @@
               class="menu menu-sm bg-transparent dropdown-content bg-base-100 rounded-box z-1 shadow"
             >
               <li>
-                <a
+                <a onclick="change_the_Product_Page()"
                   class="bg-transparent hover:bg-transparent hover:text-[#4b3deb]"
                   >Home</a
                 >
               </li>
               <li>
-                <a
+                <a onclick="change_the_home_Page()"
                   class="bg-transparent hover:bg-transparent hover:text-[#4b3deb]"
                   >Products</a
                 >
@@ -101,8 +104,48 @@
     </section>
     <!-- Navbar Section  End -->
 
+    <!-- All product section start   -->
+     <section id="All_product_section" class="py-12 bg-white font-sans hidden ">
+  <div class="max-w-6xl mx-auto px-4 pb-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-[#111827] mb-10">
+      Our Products
+    </h2>
+
+    <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+      <button onclick="show_all_data()" class="px-8 py-2.5 hover:bg-[#5542ff] text-black hover:text-white rounded-full font-medium transition-all  shadow-md">
+        All
+      </button>
+
+      <button onclick="show_category('electronics')" class="px-6 py-2.5 border hover:bg-[#5542ff] border-gray-200 text-black hover:text-white rounded-full font-medium transition-all hover:border-[#5542ff] ">
+        Electronics
+      </button>
+
+      <button onclick="show_category('jewelery')" class="px-6 py-2.5 border hover:bg-[#5542ff] border-gray-200 text-black hover:text-white rounded-full font-medium transition-all hover:border-[#5542ff] ">
+        Jewelery
+      </button>
+      
+
+      <button onclick="show_category(`men's clothing`)" class="px-6 py-2.5 border hover:bg-[#5542ff] border-gray-200 text-black hover:text-white rounded-full font-medium transition-all hover:border-[#5542ff] ">
+        Men's Clothing
+      </button>
+
+      <button onclick="show_category(`women's clothing`)" class="px-6 py-2.5 border hover:bg-[#5542ff] border-gray-200 text-black hover:text-white rounded-full font-medium transition-all hover:border-[#5542ff] ">
+        Women's Clothing
+      </button>
+    </div>
+  </div>
+
+  <!-- Show the All product  -->
+   <div id="All_product_container" class="grid grid-cols-1  lg:grid-cols-3 lg:pl-32 lg:pr-32 gap-2">
+
+
+   </div>
+     </section>
+
+    <!-- All product section End -->
+
     <!-- Banner and body section  -->
-    <section>
+    <section class=""  id="home_page_banner">
       <!-- Banner section start  -->
       <div
         class="relative h-[500px] w-full overflow-hidden flex items-center bg-cover bg-center"
@@ -297,21 +340,21 @@
           <p class="text-sm">© 2025 SwiftCart, Inc. All rights reserved.</p>
 
           <div class="flex space-x-6">
-            <a href="#" class="hover:text-white">
+            <a href="https://www.facebook.com" class="hover:text-white">
               <img
                 class="w-10 filter invert text-white"
                 src="image/facebook.png"
                 alt=""
                 srcset=""
             /></a>
-            <a href="#" class="hover:text-white"
+            <a href="https://www.instagram.com" class="hover:text-white"
               ><img
                 class="w-10 filter invert text-white"
                 src="image/instagram.png"
                 alt=""
                 srcset=""
             /></a>
-            <a href="#" class="hover:text-white">
+            <a href="https://www.linkedin.com" class="hover:text-white">
               <img
                 class="w-10 filter invert text-white"
                 src="image/linkedin.png"
@@ -319,7 +362,7 @@
                 srcset=""
               />
             </a>
-            <a href="#" class="hover:text-white">
+            <a href="https://www.x.com" class="hover:text-white">
               <img
                 class="w-10 filter invert text-white"
                 src="image/twitter.png"
@@ -327,7 +370,7 @@
                 srcset=""
               />
             </a>
-            <a href="#" class="hover:text-white">
+            <a href="https://mail.google.com/mail/u/0/#inbox" class="hover:text-white">
               <img
                 class="w-10 filter invert text-white"
                 src="image/mail-inbox-app.png"
@@ -360,5 +403,6 @@
 
     <!-- javaScript Section -->
     <script src="Home.js"></script>
+    <script src="product.js"></script>
   </body>
 </html>
